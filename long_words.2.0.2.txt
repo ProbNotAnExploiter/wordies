@@ -124,3 +124,7 @@ phlegm
 larynx
 pharynx
 sphynx
+Sisyrinchium
+Itylus
+encephalon
+encephalopathy
