@@ -1,0 +1,39 @@
+             [ Decontam / Spawn ]
+                      |
+            ┌─────────┘
+            ▼
+   [ Admin Corridor ]───┐
+        |       \        \
+        ▼        \        ▼
+   [ Offices ]   [ Side Corridor ]──[ Storage (Key L1) ]
+        |                  |                |
+        |                  └──────┐         |
+        |                         ▼         |
+        |                 [ Utility Niche ]  |
+        |                         |         |
+        |                         |         ▼
+        └───────────────┬─────────┴───[ Turbine Hall ]
+                        |
+                        ▼
+                 [ Narrow Access Hall ]
+                        |
+                        ▼
+              [ Electrical Substation ]
+                        |
+                        ▼
+              ┌───────────────────────┐
+              ▼                       ▼
+     [ Reactor Control ]         [ Maintenance Corridor ]
+              |                       |
+              |                       ▼
+              |                 [ Basement Access Hatch ]
+              |                       |
+              └──────────────┬────────┘
+                             ▼
+                     [ Reactor Core ]
+                             |
+                             ▼
+                    [ Service Tunnels ]
+                             |
+                             ▼
+                          [ EXIT ]
