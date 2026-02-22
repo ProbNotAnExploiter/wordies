@@ -344,4 +344,6 @@ webbies
 xenophobies
 yabbies
 zombies
+bromopikrin
+chlorpikrin
 
