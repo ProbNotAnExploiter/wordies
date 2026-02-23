@@ -372,6 +372,11 @@ takt
 tkt
 unpinkt
 welkt
+falanaka
+kanaka
+panaka
+tanaka
+
 
 
 
