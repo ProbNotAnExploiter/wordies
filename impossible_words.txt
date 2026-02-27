@@ -376,6 +376,12 @@ falanaka
 kanaka
 panaka
 tanaka
+aeolipyle
+apopyle
+hypsipyle
+micropyle
+prosopyle
+
 
 
 
