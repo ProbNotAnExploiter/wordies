@@ -404,6 +404,15 @@ reist
 sizeist
 theist
 zeist
+actg
+contg
+ctg
+extg
+mktg
+mtg
+ptg
+shtg
+stg
 
 
 
