@@ -381,6 +381,30 @@ apopyle
 hypsipyle
 micropyle
 prosopyle
+ableist
+ageist
+atheist
+breist
+cameist
+coueist
+cueist
+deist
+epeeist
+feist
+fideist
+geist
+heist
+hygeist
+ideist
+illeist
+keist
+museist
+neist
+reist
+sizeist
+theist
+zeist
+
 
 
 
