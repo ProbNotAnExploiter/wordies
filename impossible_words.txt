@@ -428,6 +428,28 @@ rhanja
 sonja
 toronja
 zanja
+baidarka
+bidarka
+boorka
+burka
+catasarka
+charka
+edmarka
+ghurka
+harka
+khirka
+koorka
+kwarterka
+makhorka
+marka
+mazourka
+mazurka
+nerka
+parka
+qindarka
+qintarka
+tarka
+
 
 
 
