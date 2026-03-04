@@ -644,7 +644,23 @@ zinober
 diag
 sundiag
 variag
-
+bedeguar
+bilinguar
+cantuar
+chaguar
+couguar
+douar
+duar
+feuar
+guar
+jaguar
+kuar
+quar
+trilinguar
+werejaguar
+tual
+rorqual
+nagual
 
 
 
