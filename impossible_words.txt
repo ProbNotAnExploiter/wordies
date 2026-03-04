@@ -286,7 +286,6 @@ chaunoprockt
 gedackt
 gedeckt
 hankt
-kt
 lobcokt
 mkt
 pkt
@@ -297,7 +296,6 @@ sekt
 shakt
 spekt
 takt
-tkt
 unpinkt
 welkt
 falanaka
@@ -387,10 +385,10 @@ redelay
 relay
 rockelay
 rokelay
+asmr
 roundelay
 underlielay
 virelay
-cwm
 shawm
 aggadic
 arcadic
@@ -441,6 +439,9 @@ garookuh
 shilluh
 shluh
 wurraluh
+intsv
+kolozsv
+
 iortn
 hhd
 daddynut
@@ -543,6 +544,7 @@ vasiliu
 dhikr
 konfyt
 moskonfyt
+
 
 
 
