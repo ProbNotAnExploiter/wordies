@@ -611,6 +611,24 @@ zambezi
 zoanthacea
 tnpk
 tpk
+aardonyx
+acronyx
+baryonyx
+carnyx
+chalcedonyx
+dicrostonyx
+draconyx
+gryponyx
+ictonyx
+jasponyx
+larnyx
+megalonyx
+mesonyx
+perionyx
+pnyx
+sardonyx
+scipionyx
+trionyx
 
 
 
