@@ -545,6 +545,8 @@ tiu
 ushabtiu
 vasiliu
 dhikr
+konfyt
+moskonfyt
 
 
 
