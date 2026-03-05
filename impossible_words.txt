@@ -689,6 +689,17 @@ toat
 sao
 chien
 nunavut
+caixinha
+cunha
+farinha
+ipecacuanha
+linha
+maranha
+piranha
+pupunha
+sapucainha
+tanha
+varginha
 
 
 
