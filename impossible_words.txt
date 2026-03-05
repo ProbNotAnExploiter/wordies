@@ -674,6 +674,12 @@ mousehawk
 mowhawk
 newshawk
 nighthawk
+alnein
+aranein
+cornein
+dynein
+nein
+solanein
 
 
 
