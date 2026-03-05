@@ -686,6 +686,8 @@ wrnt
 dien
 stoat
 toat
+sao
+chien
 
 
 
