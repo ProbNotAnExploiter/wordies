@@ -779,6 +779,40 @@ recollapse
 relapse
 synapse
 trapse
+abnakis
+alfakis
+cusseta
+davoch
+demakis
+dukakis
+efl
+equiseta
+getmjlkost
+heterakis
+kakis
+kazantzakis
+khakis
+konakis
+makis
+meseta
+pakis
+peseta
+rakis
+refl
+rumakis
+sakis
+scoog
+seta
+souvlakis
+sukiyakis
+takis
+teriyakis
+tetrakis
+theodorakis
+xenakis
+yidakis
+ashli
+karthli
 
 
 
