@@ -761,6 +761,26 @@ leucoethiop
 todayll
 ylahayll
 maill
+fleabug
+antilapse
+apse
+collapse
+counterapse
+delapse
+elapse
+ephapse
+illapse
+interlapse
+lapse
+neurosynapse
+precollapse
+prolapse
+recollapse
+relapse
+synapse
+trapse
+
+
 
 
 
