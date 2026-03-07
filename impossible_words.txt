@@ -844,6 +844,39 @@ thatd
 whatd
 ilsemannite
 ilsemannites
+acanthodii
+circumradii
+comsymp
+deutomalal
+dupondidii
+dupondii
+eubasidii
+gladii
+gymp
+halal
+hemibasidii
+hemipodii
+herodii
+indii
+inradii
+interradii
+khalal
+leptocardii
+leylandii
+medidii
+medii
+modii
+perradii
+protobasidii
+protomalal
+radidii
+radii
+salal
+stapedii
+tridii
+triradii
+tymp
+ubii
 
 
 
