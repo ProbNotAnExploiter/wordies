@@ -826,6 +826,40 @@ skiwies
 swies
 towies
 yowies
+actg
+apptd
+cmd
+contd
+contg
+ctg
+ctge
+detd
+dtd
+extg
+ftncmd
+gtd
+itd
+ltd
+mktg
+mtd
+mtg
+mtge
+mtscmd
+patd
+ptg
+qtd
+retd
+rotge
+satd
+sctd
+shtg
+std
+stg
+stge
+td
+tg
+thatd
+whatd
 
 
 
