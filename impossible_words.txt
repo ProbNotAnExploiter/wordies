@@ -1007,6 +1007,8 @@ ashjian
 elmajian
 fijian
 zildjian
+selsoviet
+soviet
 
 
 
