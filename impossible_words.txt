@@ -1030,6 +1030,8 @@ puppys
 therapys
 aegyo
 gongyo
+andropov
+karpov
 
 
 
