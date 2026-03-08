@@ -1032,6 +1032,9 @@ aegyo
 gongyo
 andropov
 karpov
+ecch
+yecch
+yucch
 
 
 
