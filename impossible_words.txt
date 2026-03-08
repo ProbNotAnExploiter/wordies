@@ -1009,6 +1009,7 @@ fijian
 zildjian
 selsoviet
 soviet
+ngai
 
 
 
