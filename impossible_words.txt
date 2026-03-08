@@ -1010,6 +1010,20 @@ zildjian
 selsoviet
 soviet
 ngai
+bronchiloquy
+chequy
+colloquy
+dulciloquy
+magniloquy
+obloquy
+pauciloquy
+pectoriloquy
+soliloquy
+somniloquy
+stultiloquy
+tardiloquy
+tristiloquy
+ventriloquy
 
 
 
