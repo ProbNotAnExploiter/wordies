@@ -1133,6 +1133,10 @@ narw
 starw
 rushlit
 torchlit
+gascromh
+ollamh
+samh
+tmh
 
 
 
