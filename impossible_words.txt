@@ -1388,6 +1388,11 @@ hangul
 dsobo
 darknet
 knet
+acetla
+cotsetla
+kgotla
+lekgotla
+paratitla
 
 
 
