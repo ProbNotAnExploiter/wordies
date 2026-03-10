@@ -1384,7 +1384,8 @@ minerva
 nerva
 riserva
 yerva
-
+hangul
+dsobo
 
 
 
