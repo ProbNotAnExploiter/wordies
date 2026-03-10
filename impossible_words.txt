@@ -1480,8 +1480,23 @@ rezala
 hydropolyp
 machopolyp
 scyphopolyp
-
-
+baraka
+betsimisaraka
+jararaka
+karaka
+lusaka
+makaraka
+maraka
+mousaka
+moussaka
+osaka
+ostraka
+saka
+straka
+epinaoi
+naoi
+pronaoi
+fuji
 
 
 
