@@ -1376,6 +1376,14 @@ tylopod
 unsepulchre
 uropod
 sapego
+caterva
+conferva
+contrayerva
+eperva
+minerva
+nerva
+riserva
+yerva
 
 
 
