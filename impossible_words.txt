@@ -1509,6 +1509,8 @@ sankhya
 shishya
 tanhya
 xenophya
+glali
+hallali
 
 
 
