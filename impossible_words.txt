@@ -1519,6 +1519,14 @@ boyg
 myg
 tyg
 wysiwyg
+chg
+mhg
+nbg
+subg
+haloa
+linaloa
+sinaloa
+tangaloa
 
 
 
