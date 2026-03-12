@@ -1523,6 +1523,10 @@ chg
 mhg
 nbg
 subg
+cotoxo
+moxo
+oxo
+peroxo
 haloa
 linaloa
 sinaloa
@@ -1552,6 +1556,7 @@ trabuco
 albuca
 cambuca
 sambuca
+
 
 
 
