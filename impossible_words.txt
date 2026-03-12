@@ -1556,7 +1556,37 @@ trabuco
 albuca
 cambuca
 sambuca
-
+agnolotti
+allamotti
+biscotti
+borlotti
+chinotti
+contrafagotti
+fagotti
+manicotti
+menotti
+panzerotti
+pavarotti
+potti
+assapan
+attacapan
+bsf
+catapan
+caudocephalad
+cephalad
+cypseli
+dorsocephalad
+janapan
+japan
+kulanapan
+matapan
+recusf
+salad
+sapan
+seseli
+tchapan
+transf
+trapan
 
 
 
