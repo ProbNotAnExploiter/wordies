@@ -1587,6 +1587,13 @@ seseli
 tchapan
 transf
 trapan
+fecche
+ficche
+grucche
+racche
+recche
+wecche
+wlecche
 
 
 
