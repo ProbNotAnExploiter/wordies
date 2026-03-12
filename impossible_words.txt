@@ -1546,6 +1546,9 @@ splenii
 spleninii
 szopelka
 ilka
+bambuco
+ossobuco
+trabuco
 
 
 
