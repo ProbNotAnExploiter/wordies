@@ -1647,6 +1647,20 @@ swarga
 targa
 visarga
 wagga
+acini
+arancini
+bocconcini
+boconcini
+cappuccini
+fantoccini
+fettuccini
+fettucini
+latticicini
+latticini
+maccheroncini
+porcini
+puccini
+uncini
 
 
 
