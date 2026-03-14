@@ -11,6 +11,7 @@ import time
 import random
 import threading
 import sys
+import datetime
 import os
 import pickle
 
@@ -67,9 +68,20 @@ class OverlayConsole:
         self.last_ocr_time = 0
         self.ocr_state = "free"  
         self.ocr_cooldown = 0.7  
+        self.prefix_triggers = set()
+        self.special_words = set()
+        self.special_mode = False
         self.impossible_mode = False
         self.impossible_words = []
         self.double_press_threshold = 0.3
+        script_dir = os.path.dirname(os.path.abspath(__file__))
+        self.log_dir = os.path.join(script_dir, "logs")
+        os.makedirs(self.log_dir, exist_ok=True)
+        self.history_file = os.path.join(self.log_dir, "wordlogs.txt")
+        if not os.path.exists(self.history_file):
+            with open(self.history_file, "w", encoding="utf-8") as f:
+                f.write("Word helper logs\n\n")
+
         self.last_press_time = {}
         self.message_frame = tk.Frame(root, bg="#0a0a14")
         self.message_frame.pack(fill="both", expand=False, padx=10, pady=6)
@@ -300,7 +312,14 @@ class OverlayConsole:
           "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/refs/heads/main/verified_words_withnames1.txt",
           "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/refs/heads/main/letters/merged_english.txt"
         ]
-        impossible_url = "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/refs/heads/main/impossible_words.txt"
+        impossible_urls = [
+        "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/main/2letterstraps",
+        "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/main/3kimpossiblewords4letters",
+        "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/main/3letterstrap"
+        ]
+
+        solve_list = "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/refs/heads/main/solve.txt"
+        prefixes = "https://raw.githubusercontent.com/ProbNotAnExploiter/wordies/refs/heads/main/prefixer"
         all_words = set()
         for url in urls:
             try:
@@ -318,15 +337,46 @@ class OverlayConsole:
         self.word_list = sorted(all_words)
 
         try:
-            response = requests.get(impossible_url, timeout=10)
-            response.raise_for_status()
-            self.impossible_words = sorted({
-                line.strip().lower() 
-                for line in response.text.splitlines()
-                if line.strip() 
-            })
-        except requests.RequestException:
-            self.impossible_words = []
+            r = requests.get(solve_list, timeout=10)
+            r.raise_for_status()
+            self.prefix_triggers = {
+                line.strip().lower()
+                for line in r.text.splitlines()
+                if line.strip()
+            }
+        except:
+            self.prefix_triggers = set()
+
+        try:
+            r = requests.get(prefixes, timeout=10)
+            r.raise_for_status()
+            self.special_words = {
+                line.strip().lower()
+                for line in r.text.splitlines()
+                if line.strip()
+            }
+        except:
+            self.special_words = set()
+
+        all_impossible = set()
+
+        for url in impossible_urls:
+            try:
+                response = requests.get(url, timeout=10)
+                response.raise_for_status()
+
+                words = {
+                    line.strip().lower()
+                    for line in response.text.splitlines()
+                    if line.strip()
+                }
+
+                all_impossible |= words
+
+            except requests.RequestException:
+                print(f"Failed to fetch {url}")
+
+        self.impossible_words = sorted(all_impossible)
         data = {
             "word_list": self.word_list,
             "impossible_words": self.impossible_words
@@ -393,16 +443,62 @@ class OverlayConsole:
 
         if word:
             self.prefix = word.lower()
+            self.special_mode = False
+
+            for p in getattr(self, "prefix_triggers", []):
+                if self.prefix.startswith(p):
+                    self.special_mode = True
+                    break
+
             self.selected_index = 0
             self.word_chosen = False
             self.write(f"Matching Result: {word}")
 
-            source_list = self.impossible_words if self.impossible_mode else self.word_list
+            if self.special_mode:
+                source_list = self.special_words
+                self.last_mode = "special"
+            elif self.impossible_mode:
+                source_list = self.impossible_words
+                self.last_mode = "impossible"
+            else:
+                source_list = self.word_list
+            if self.impossible_mode:
+                matches = [
+                    w for w in self.impossible_words
+                    if w.startswith(self.prefix)
+                ]
 
-            matches = [
-                w for w in source_list
-                if w.startswith(self.prefix)
-            ]
+    # fallback to normal list
+                if self.special_mode:
+                    self.last_mode = "special"
+                elif self.impossible_mode:
+                    self.last_mode = "impossible"
+                else:
+                    self.last_mode = "normal"
+
+                matches = [
+                    w for w in source_list
+                    if w.startswith(self.prefix)
+                ]
+
+                if not matches:
+                    matches = [
+                        w for w in self.word_list
+                        if w.startswith(self.prefix)
+                ]
+
+    # fallback to normal list
+                if not matches and self.impossible_mode:
+                    matches = [
+                        w for w in self.word_list
+                        if w.startswith(self.prefix)
+                ]
+
+            else:
+                matches = [
+                        w for w in self.word_list
+                        if w.startswith(self.prefix)
+                ]
 
 
             if not matches:
@@ -449,7 +545,12 @@ class OverlayConsole:
             return
 
     
-        source_list = self.impossible_words if self.impossible_mode else self.word_list
+        if getattr(self, "special_mode", False):
+            source_list = self.special_words
+        elif self.impossible_mode:
+            source_list = self.impossible_words
+        else:
+            source_list = self.word_list
 
         matching_words = [
             w for w in source_list
@@ -681,7 +782,6 @@ class OverlayConsole:
         self.choose_random_word()
         time.sleep(0.05)
         self.type()
-
       threading.Thread(target=worker, daemon=True).start()
 
 
@@ -719,6 +819,12 @@ class OverlayConsole:
         self._update_selection(old_index, self.selected_index)
 
         self.choose_word()
+
+    def log_word(self, word):
+        now = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        mode = getattr(self, "last_mode", "normal")
+        with open(self.history_file, "a", encoding="utf-8") as f:
+            f.write(f"{now} | {self.prefix} | {word} | {mode}\n")
 
     def delete_word(self):
         global Word_typed
@@ -824,6 +930,7 @@ class OverlayConsole:
                 pydirectinput.press("enter")
                 Word_typed = full_word
                 self.write(f"You typed: {full_word_display}", "success")
+                self.log_word(full_word_display)
 
             except Exception as e:
                 print("Error:", e)
